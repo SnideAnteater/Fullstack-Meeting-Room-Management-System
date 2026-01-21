@@ -1,12 +1,12 @@
 export interface Room {
-  id: number;
+  id: string;
   name: string;
   capacity: number;
 }
 
 export interface TimeSlot {
-  id: number;
-  roomId: number;
+  id: string;
+  roomId: string;
   date: string; // YYYY-MM-DD
   startTime: string; // HH:mm
   endTime: string; // HH:mm
@@ -15,8 +15,8 @@ export interface TimeSlot {
 }
 
 export interface Booking {
-  id: number;
-  roomId: number;
+  id: string;
+  roomId: string;
   roomName: string;
   date: string; // YYYY-MM-DD
   startTime: string; // HH:mm
@@ -25,10 +25,15 @@ export interface Booking {
 }
 
 export interface BookingRequest {
-  roomId: number;
+  roomId: string;
   date: string;
   startTime: string;
   icNumber: string;
+}
+
+export interface CreateRoomRequest {
+  name: string;
+  capacity: number;
 }
 
 export interface ApiResponse<T> {

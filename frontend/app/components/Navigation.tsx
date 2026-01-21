@@ -46,6 +46,16 @@ export function Navigation() {
               >
                 My Bookings
               </Link>
+              <Link
+                href="/rooms/new"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/rooms/new")
+                    ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                }`}
+              >
+                Add Room
+              </Link>
             </div>
           </div>
 

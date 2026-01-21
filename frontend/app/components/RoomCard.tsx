@@ -5,7 +5,7 @@ import { Room, TimeSlot } from "../lib/types";
 interface RoomCardProps {
   room: Room;
   timeSlots: TimeSlot[];
-  onBookSlot: (roomId: number, slot: TimeSlot) => void;
+  onBookSlot: (roomId: string, slot: TimeSlot) => void;
   isLoading?: boolean;
 }
 

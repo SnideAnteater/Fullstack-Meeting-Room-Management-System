@@ -114,12 +114,11 @@ export class RoomService {
 
     // Insert new room
     const insertStmt = db.prepare(`
-    INSERT INTO rooms (name, capacity)
-    VALUES (?, ?)
+    INSERT INTO rooms (id, name, capacity)
+    VALUES (?, ?, ?)
   `);
 
-    const result = insertStmt.run(name.trim(), capacity);
-
+    const result = insertStmt.run(roomId, name.trim(), capacity);
     return {
       id: roomId,
       name: name.trim(),

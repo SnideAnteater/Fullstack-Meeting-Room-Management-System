@@ -20,15 +20,3 @@ api.interceptors.request.use((config) => {
   }
   return config;
 });
-
-// handle errors
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.code === "ECONNABORTED" || error.code === "ERR_NETWORK") {
-      console.warn("API unavailable, using mock data");
-      return Promise.reject({ useMock: true, originalError: error });
-    }
-    return Promise.reject(error);
-  },
-);

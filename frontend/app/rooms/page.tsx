@@ -25,7 +25,6 @@ export default function RoomsPage() {
 
   useEffect(() => {
     loadRooms();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDate]);
 
   const loadRooms = async () => {
@@ -43,7 +42,7 @@ export default function RoomsPage() {
     }
   };
 
-  const handleBookSlot = async (roomId: number, slot: TimeSlot) => {
+  const handleBookSlot = async (roomId: string, slot: TimeSlot) => {
     if (!icNumber) {
       setError("Please login with your IC number");
       return;
@@ -85,7 +84,7 @@ export default function RoomsPage() {
     }
   };
 
-  const getTimeSlotsForRoom = (roomId: number): TimeSlot[] => {
+  const getTimeSlotsForRoom = (roomId: string): TimeSlot[] => {
     return timeSlots.filter((slot) => slot.roomId === roomId);
   };
 
