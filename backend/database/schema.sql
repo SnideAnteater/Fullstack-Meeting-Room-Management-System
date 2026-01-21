@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS bookings (
 );
 
 -- Insert sample rooms
--- INSERT INTO rooms (id, name, capacity) VALUES 
---     ('1', 'Conference Room A', 10),
---     ('2', 'Meeting Room B', 6),
---     ('3', 'Huddle Room C', 4);
+INSERT INTO rooms (id, name, capacity) VALUES 
+    ('1', 'Conference Room A', 10),
+    ('2', 'Meeting Room B', 6),
+    ('3', 'Huddle Room C', 4);
